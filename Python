@@ -1,0 +1,21 @@
+import random
+
+answer = random.randint(1,1000)
+print ("Guess a number from 1 to 1000")
+print ("Press Q to quit")
+response = input("Enter a number : ")
+counter=1
+
+while response != "Q":
+  if int(response)==answer:
+    print ("Correct! The answer is ",answer)
+    print ("Yopu have tried ",counter," times")
+    break
+  elif int(response)>answer:
+    print ("Lower!")
+  elif int(response)<answer:
+    print ("Higher!")
+  response = input("Enter a number : ")
+  counter += 1
+  
+print ("Thank you! See you next time!")
